@@ -36,6 +36,7 @@ const Footer = () => {
               <li><Link to="/doctors" className="text-gray-300 hover:text-white transition-colors">Our Doctors</Link></li>
               <li><Link to="/appointments" className="text-gray-300 hover:text-white transition-colors">Book Appointment</Link></li>
               <li><Link to="/patient-portal" className="text-gray-300 hover:text-white transition-colors">Patient Portal</Link></li>
+              <li><Link to="/faq" className="text-gray-300 hover:text-white transition-colors">FAQ</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
             </ul>
           </div>
@@ -89,6 +90,7 @@ const Footer = () => {
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
+              <Link to="/faq" className="text-gray-400 hover:text-white text-sm transition-colors">FAQ</Link>
               <Link to="/admin" className="text-gray-400 hover:text-white text-sm transition-colors">Admin</Link>
             </div>
           </div>

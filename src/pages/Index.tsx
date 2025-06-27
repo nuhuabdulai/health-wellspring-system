@@ -1,7 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Phone, Users, Building2, Heart, Shield, Award, Clock, MapPin, Mail } from 'lucide-react';
+import Testimonials from '../components/Testimonials';
+import Newsletter from '../components/Newsletter';
 
 const Index = () => {
   const services = [
@@ -144,6 +145,9 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Patient Testimonials */}
+      <Testimonials />
+
       {/* News & Alerts */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,6 +185,13 @@ const Index = () => {
               <span className="ml-2">→</span>
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Newsletter />
         </div>
       </div>
 

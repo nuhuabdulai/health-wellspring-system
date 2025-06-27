@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Heart, Brain, Bone, Baby, Eye, Stethoscope, Scissors, Users } from 'lucide-react';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Departments = () => {
   const departments = [
@@ -56,6 +56,8 @@ const Departments = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Breadcrumb items={[{ label: 'Departments' }]} />
+      
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

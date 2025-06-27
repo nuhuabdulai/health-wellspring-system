@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { Search, Filter, Star, Calendar, MapPin, Phone, Mail, Award } from 'lucide-react';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Doctors = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -120,6 +120,8 @@ const Doctors = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Breadcrumb items={[{ label: 'Our Doctors' }]} />
+      
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -16,6 +16,7 @@ const Navbar = () => {
     { name: 'Patient Portal', href: '/patient-portal', icon: Shield },
     { name: 'Emergency', href: '/emergency', icon: Phone },
     { name: 'Health Blog', href: '/blog', icon: BookOpen },
+    { name: 'FAQ', href: '/faq', icon: MessageCircle },
     { name: 'Careers', href: '/careers', icon: Briefcase },
     { name: 'Contact', href: '/contact', icon: MessageCircle },
   ];
