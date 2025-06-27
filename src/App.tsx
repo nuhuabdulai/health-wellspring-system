@@ -19,6 +19,7 @@ import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import FAQ from "./pages/FAQ";
 import AccessibilityMenu from "./components/AccessibilityMenu";
+import LiveChat from "./components/LiveChat";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           </main>
           <Footer />
           <AccessibilityMenu />
+          <LiveChat />
         </div>
       </BrowserRouter>
     </TooltipProvider>

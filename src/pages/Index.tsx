@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Calendar, Phone, Users, Building2, Heart, Shield, Award, Clock, MapPin, Mail } from 'lucide-react';
 import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
+import EventsCalendar from '../components/EventsCalendar';
 
 const Index = () => {
   const services = [
@@ -147,6 +148,9 @@ const Index = () => {
 
       {/* Patient Testimonials */}
       <Testimonials />
+
+      {/* Events Calendar */}
+      <EventsCalendar />
 
       {/* News & Alerts */}
       <div className="py-16 bg-gray-50">

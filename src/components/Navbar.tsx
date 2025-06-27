@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Calendar, Users, Building2, BookOpen, Briefcase, Shield, MessageCircle } from 'lucide-react';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,10 +73,12 @@ const Navbar = () => {
                 })}
               </div>
             </div>
+            <LanguageSelector />
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden flex items-center space-x-2">
+            <LanguageSelector />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 p-2"
