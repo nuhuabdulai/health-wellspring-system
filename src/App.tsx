@@ -20,6 +20,8 @@ import NotFound from "./pages/NotFound";
 import FAQ from "./pages/FAQ";
 import AccessibilityMenu from "./components/AccessibilityMenu";
 import LiveChat from "./components/LiveChat";
+import Privacy from "./pages/Privacy";
+import CookieNotice from "./components/CookieNotice";
 
 const queryClient = new QueryClient();
 
@@ -30,8 +32,18 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <div className="min-h-screen flex flex-col">
+          {/* Skip to main content link for accessibility */}
+          <a 
+            href="#main-content" 
+            className="skip-link"
+            onFocus={(e) => e.target.classList.add('top-4')}
+            onBlur={(e) => e.target.classList.remove('top-4')}
+          >
+            Skip to main content
+          </a>
+          
           <Navbar />
-          <main className="flex-1">
+          <main id="main-content" className="flex-1">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
@@ -44,6 +56,7 @@ const App = () => (
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/privacy" element={<Privacy />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
@@ -51,6 +64,7 @@ const App = () => (
           <Footer />
           <AccessibilityMenu />
           <LiveChat />
+          <CookieNotice />
         </div>
       </BrowserRouter>
     </TooltipProvider>

@@ -100,4 +100,87 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Enhanced focus styles for better accessibility */
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  a:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+
+  /* Skip to main content link for screen readers */
+  .skip-link {
+    @apply absolute -top-10 left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 transition-all;
+  }
+
+  .skip-link:focus {
+    @apply top-4;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    * {
+      border-color: currentColor !important;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Lazy loading blur effect */
+  .lazy-image {
+    @apply transition-all duration-300;
+    filter: blur(5px);
+  }
+
+  .lazy-image.loaded {
+    filter: blur(0);
+  }
+
+  /* Form validation styles */
+  .form-field-error {
+    @apply border-red-500 ring-red-500;
+  }
+
+  .form-field-success {
+    @apply border-green-500 ring-green-500;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
 }
